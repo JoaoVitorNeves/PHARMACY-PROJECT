@@ -1,6 +1,7 @@
 package br.com.criandoaoi.projeto.settigns;
 import br.com.criandoaoi.projeto.controller.*;
-import br.com.criandoaoi.projeto.DAO.*;
+import br.com.criandoaoi.projeto.repository.*;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
