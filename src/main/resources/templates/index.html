@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>FarmaciaAPP</title>
+	<style type="text/css">/* Estilizando o body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+/* Estilizando o cabeçalho h1 */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando o formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+/* Estilizando o campo de entrada de texto */
+input[name="cns"] {
+  width: 200px;
+  padding: 5px;
+  border: 3px solid #ccc;
+  border-radius: 3px;
+  border-color:black;
+}
+
+/* Estilizando o botão de envio */
+input[type="submit"] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilizando os dados do paciente */
+.row {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.nome {
+  font-weight: bold;
+}
+
+/* Estilizando os parágrafos dos dados do paciente */
+.row p {
+  margin: 5px 0;
+}
+
+</style>
+</head>
+	<body>
+
+	<h1>Governo Do Estado Da Bahia </h1>
+	<h2>
+	Pesquisar Paciente:
+	</h2>
+	<form action="pesquisarpessoa" method="post">
+	
+	
+            CNS : <input name="cns"/>
+            
+            <div><input type="submit" value="Pesquisar"/></div>
+        
+	
+	</form>
+	<br/>
+
+	<br/>
+	<h2>Dados do Paciente:</h2>
+    <div th:each="evento:${eventos}">
+      <div class="row">
+        <p>Nome: <span class="nome" th:text="${evento.nome_completo}"></span></p>
+        <p>Telefone: <span th:text="${evento.telefone}"></span></p>
+        <p>Medicamento: <span th:text="${evento.medicamentos}"></span></p>
+        <p>Quantidade: <span th:text="${evento.qnt_med}"></span></p>
+        <p>Cns: <span th:text="${evento.cns}"></span></p>
+        </div>
+      </div>	
+	</body>
+
+</html>

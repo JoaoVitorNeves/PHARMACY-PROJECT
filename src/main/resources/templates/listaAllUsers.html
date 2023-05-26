@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">/* Estilizando o body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Estilizando o h1 */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando a classe row */
+.row {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilizando os parágrafos dentro da classe row */
+.row p {
+  margin: 5px 0;
+}
+
+/* Estilizando os spans dentro dos parágrafos */
+.row span {
+  font-weight: bold;
+}
+    </style>
+    <title>FarmaciaAPP</title>
+  </head>
+  <body>
+    <h1>Cadastro de Paciente:</h1>
+    <div th:each="evento:${eventos}">
+      <div class="row">
+        <p>Nome: <span th:text="${evento.nome_completo}"></span></p>
+        <p>Telefone: <span th:text="${evento.telefone}"></span></p>
+        <p>Medicamento: <span th:text="${evento.medicamentos}"></span></p>
+        <p>Quantidade: <span th:text="${evento.qnt_med}"></span></p>
+        <p>Cns: <span th:text="${evento.cns}"></span></p>
+        
+      </div>
+      <br/>
+    </div>
+  </body>
+</html>

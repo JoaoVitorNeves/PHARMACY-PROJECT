@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>FarmaciaAPP</title>
+	<style type="text/css">/* Estilizando o body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Estilizando o cabeçalho h1 */
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando o formulário */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilizando os rótulos dos campos */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Estilizando as caixas de entrada de texto */
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+/* Estilizando o botão de envio */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilizando mensagens de erro */
+.error-message {
+  color: red;
+  margin-top: 5px;
+}</style>
+</head>
+	<body>
+	<h1>
+	Cadastro de Paciente:
+	</h1>
+	<form method="post">
+	 Nome completo: <input type="text" value="" name ="nome_completo">
+	Telefone:<input type="text" value="" name ="telefone">
+	Cns: <input type="text" value="" name ="cns">
+	Medicamentos:<input type="text" value="" name ="medicamentos">
+	Qnt med:<input type="text" value="" name ="qnt_med">
+	Ultima retirada:<input type="date" value="" name ="ultima_retirada">
+	
+	<button type="submit">Salvar</button>
+	</form>
+	
+	</body>
+
+</html>
